@@ -73,7 +73,7 @@ function options() {
 
 // view all departments 
 function viewDepartments() {
-    var query = 'SELECT * FROM department';
+    let query = 'SELECT * FROM department';
     connection.query(query, function(err, res) {
         if(err)throw err;
         console.table('All Departments:', res);
@@ -84,7 +84,7 @@ function viewDepartments() {
 
 // view all roles 
 function viewRoles() {
-    var query = 'SELECT * FROM role';
+    let query = 'SELECT * FROM role';
     connection.query(query, function(err, res){
         if (err) throw err;
         console.table('All Roles:', res);
@@ -95,7 +95,7 @@ function viewRoles() {
 
 // view all employees 
 function viewEmployees() {
-    var query = 'SELECT * FROM employee';
+    let query = 'SELECT * FROM employee';
     connection.query(query, function(err, res) {
         if (err) throw err;
         console.log(res.length + ' employees found!');
